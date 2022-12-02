@@ -1,0 +1,40 @@
+.card {
+    transition: ease-in-out 350ms;
+    backface-visibility: hidden;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.card:hover {
+    transform: scale(1.07);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;  
+}
+
+.image {
+    position: relative;
+    transition: ease-in-out 350ms;
+}
+
+.card:hover .image {
+    opacity: .3;
+}
+
+.m-glass {
+    opacity: 0;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: ease-in-out 350ms;
+}
+
+.card:hover .m-glass {
+    color: darkgray;
+    opacity: .6;
+}
+
+.card-body {
+    background: #f2ecff;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+

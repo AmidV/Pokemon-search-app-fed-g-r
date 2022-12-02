@@ -1,0 +1,16 @@
+<div class="container mt-5 mb-5">
+    <div class="row g-5">
+        <div class="col-6 col-md-6 col-lg-3" *ngFor="let fetchedPokemon of fetchedData.results | paginate: { itemsPerPage: pagePokemons, currentPage: page}" >
+            
+            <app-pokemon-cards [receivedPokemons]="fetchedPokemon"></app-pokemon-cards>
+            
+        </div>
+    </div>
+</div>
+
+<div class="mt-8 py-5 d-flex justify-content-center">
+  <pagination-controls
+    class="color-light"
+    (pageChange)="pageChange($event)"
+  ></pagination-controls>
+</div>

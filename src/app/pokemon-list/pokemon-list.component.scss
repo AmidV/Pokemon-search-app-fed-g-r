@@ -1,0 +1,19 @@
+
+::ng-deep {
+    .ngx-pagination a:hover,
+    .ngx-pagination button:hover {
+        background: #c7ede0 !important;
+        border-bottom: 1px solid black !important;
+        opacity: .7 !important;
+    }
+
+    .ngx-pagination li {
+        border-radius: 50% !important;
+        padding: 0;
+    }
+
+    .ngx-pagination .current {
+        background: #aca7cb !important;
+    }
+
+}

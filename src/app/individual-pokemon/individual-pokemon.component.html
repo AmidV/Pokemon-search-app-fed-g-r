@@ -1,0 +1,51 @@
+
+  
+<div class="col-md-10 col-md-offset-10 d-flex align-items-center justify-content-center flex-wrap gx-4 m-auto mt-0">
+  <div class="justify-content-center align-items-center m-3 bg-light rounded cd1">
+    <img src={{ pokemonImage }} class="image img-responsive rounded i-fix m-5" alt="Pokemon_image"/>
+    <h3 class="name pb-4 text-center text-capitalize">{{ pokemonN }}</h3>
+  </div>
+
+  <div class="bg-light rounded m-3 cd2">
+    <h3 class="pt-5 text-center" >Pokemon Bio</h3> 
+    <hr>
+        
+    <div class="container">
+      <div class="mx-5 w-100 d-flex justify-between">
+
+        <dl class="mx-4">
+          <dt class="mb-2">Base Experience:</dt>
+          <dd class="mx-4">{{ pokemonBE ? pokemonBE : "N/A" }}</dd>
+          <dt class="mb-2">Height:</dt>
+          <dd class="mx-4">{{ pokemonH }}</dd>
+          <dt class="mb-2">Weight:</dt>
+          <dd class="mx-4">{{ pokemonW }}</dd>
+          <dt class="mb-2">Abilities:</dt>
+          
+          <dd *ngFor="let ability of allAbilities; let i = index" class="mx-4">
+            <ul class="list-unstyled">
+              <li>{{ i+1 }}. <span class="text-capitalize">{{ ability }}</span></li>
+            </ul>
+          </dd>
+        </dl>
+       
+        <dl class="mx-1 text-right">
+          <dt class="mb-2 text-capitalize text-end"  *ngFor="let sName of statNames;">{{ sName }}:</dt>
+        </dl>
+
+        <dl class="mx-0">
+          <dd class="mx-1" *ngFor="let bStat of baseStat;">{{ bStat }}</dd>
+        </dl>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="d-flex justify-content-center">
+  <button (click)="onBackToHome()" class="btn my-4 i-btn p-4" >Back</button>
+</div>
+
+
+
+
