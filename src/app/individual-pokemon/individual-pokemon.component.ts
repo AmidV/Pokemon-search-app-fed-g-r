@@ -18,7 +18,7 @@ export class IndividualPokemonComponent{
   pokemonW:any;
   pokemonAb:any;
   pokemonImage:any;
-  allAbilities:any;
+  allAbilities:Object[] = [];
   statNames:Object[] = [];
   baseStat:Object[] = [];
 
