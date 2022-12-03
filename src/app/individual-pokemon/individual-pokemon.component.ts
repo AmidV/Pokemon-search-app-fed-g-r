@@ -12,12 +12,13 @@ import { Location } from '@angular/common';
 export class IndividualPokemonComponent{
   pokemon!: { id: number };
   
-  pokemonN:any;
-  pokemonBE:any;
-  pokemonH:any;
-  pokemonW:any;
-  pokemonAb:any;
+  pokemonName:any;
+  pokemonBaseExperience:any;
+  pokemonHeight:any;
+  pokemonWidth:any;
+  pokemonAbility:any;
   pokemonImage:any;
+
   allAbilities:Object[] = [];
   statNames:Object[] = [];
   baseStat:Object[] = [];
@@ -46,11 +47,11 @@ export class IndividualPokemonComponent{
     this.http.get(`https://pokeapi.co/api/v2/pokemon/${this.pokemon.id}`)
     .subscribe((pokemonInfo:any) => {
       this.fetchedInfo = pokemonInfo;
-      this.pokemonBE = this.fetchedInfo.base_experience;
-      this.pokemonN = this.fetchedInfo.name;
-      this.pokemonH = this.fetchedInfo.height;
-      this.pokemonW = this.fetchedInfo.weight;
-      this.pokemonAb = this.fetchedInfo.abilities;
+      this.pokemonBaseExperience = this.fetchedInfo.base_experience;
+      this.pokemonName = this.fetchedInfo.name;
+      this.pokemonHeight = this.fetchedInfo.height;
+      this.pokemonWidth = this.fetchedInfo.weight;
+      this.pokemonAbility = this.fetchedInfo.abilities;
       
       this.pokemonImage = this.fetchedInfo.sprites.front_default 
       ? this.fetchedInfo.sprites.front_default 

@@ -3,7 +3,7 @@
 <div class="col-md-10 col-md-offset-10 d-flex align-items-center justify-content-center flex-wrap gx-4 m-auto mt-0">
   <div class="justify-content-center align-items-center m-3 bg-light rounded cd1">
     <img src="{{ pokemonImage }}" class="image img-responsive rounded i-fix m-5" alt="Pokemon_image"/>
-    <h3 class="name pb-4 text-center text-capitalize">{{ pokemonN }}</h3>
+    <h3 class="name pb-4 text-center text-capitalize">{{ pokemonName }}</h3>
   </div>
 
   <div class="bg-light rounded m-3 cd2">
@@ -15,11 +15,11 @@
 
         <dl class="mx-4">
           <dt class="mb-2">Base Experience:</dt>
-          <dd class="mx-4">{{ pokemonBE ? pokemonBE : "N/A" }}</dd>
+          <dd class="mx-4">{{ pokemonBaseExperience ? pokemonBaseExperience : "N/A" }}</dd>
           <dt class="mb-2">Height:</dt>
-          <dd class="mx-4">{{ pokemonH }}</dd>
+          <dd class="mx-4">{{ pokemonHeight }}</dd>
           <dt class="mb-2">Weight:</dt>
-          <dd class="mx-4">{{ pokemonW }}</dd>
+          <dd class="mx-4">{{ pokemonWidth }}</dd>
           <dt class="mb-2">Abilities:</dt>
           
           <dd *ngFor="let ability of allAbilities; let i = index" class="mx-4">
