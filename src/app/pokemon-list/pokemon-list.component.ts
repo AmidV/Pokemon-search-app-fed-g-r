@@ -7,10 +7,10 @@ import { ActivatedRoute, Router } from '@angular/router';
   templateUrl: './pokemon-list.component.html',
   styleUrls: ['./pokemon-list.component.scss']
 })
-
+// 1154
 export class PokemonListComponent {
   // ----- Original pokemons_web_link -----
-  _pokemonUrl:string = "https://pokeapi.co/api/v2/pokemon/?offset=0&limit=1154";
+  _pokemonUrl:string = "https://pokeapi.co/api/v2/pokemon/?offset=0&limit=1271";
   // ----- Fetched Poks Data -----
   fetchedData:any;
 

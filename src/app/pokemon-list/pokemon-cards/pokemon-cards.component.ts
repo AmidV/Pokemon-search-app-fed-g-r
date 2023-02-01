@@ -24,7 +24,7 @@ export class PokemonCardsComponent{
   ngOnInit() {
     this.fetchIndividualPokemonImg();
   }
-    
+   
 // ----- Fetching Image of Individual Pokemon -----
   private fetchIndividualPokemonImg() {
     this.http.get(`${this.pokemon.url}`)
@@ -32,11 +32,14 @@ export class PokemonCardsComponent{
       this.fetchedImage = pokemonUrl;
       this.pokImage.push(
         this.fetchedImage.sprites.front_default 
-        ? this.fetchedImage.sprites.front_default 
-        : this.fetchedImage.sprites.other["official-artwork"].front_default 
-        || this.fetchedImage.sprites.front_shiny 
-        || this.fetchedImage.sprites.other.home.front_default 
+        ? this.fetchedImage.sprites.front_default
+        : this.fetchedImage.sprites.other.home.front_default 
         || this.fetchedImage.sprites.versions["generation-viii"].icons.front_default
+        || this.fetchedImage.sprites.front_shiny
+        || this.fetchedImage.sprites.other["official-artwork"].front_default 
+        || this.fetchedImage.sprites.front_default
+        || this.fetchedImage.sprites.versions["generation-v"]["black-white"].front_default
+
       )
       this.pokID = this.fetchedImage.id;
     })    
