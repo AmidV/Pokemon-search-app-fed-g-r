@@ -1,3 +1,7 @@
+# Main Notes
+
+Web: https://pokemon-explorer-app.netlify.app/
+
 # PokéAPI Directory 
 
 ## Prerequisite
